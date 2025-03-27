@@ -7,8 +7,7 @@ public class Exerc2 {
 
         Scanner scan = new Scanner(System.in);
 
-        double cf, nota1, nota2;
-        int[] pesos = {2,3};
+        double cf, nota1, nota2, soma;
         int participacao;
 
         System.out.print("Digite o valor da nota 1: ");
@@ -20,11 +19,14 @@ public class Exerc2 {
         System.out.print("Digite o valor da nota de participação: ");
         participacao = scan.nextInt();
 
-        for (int i = 0; i < 2; i++){
+        cf = (((nota1 * 2) + (nota2 * 3)) / 5) * (0.9 + participacao * 0.1);
 
+        if (cf >= 6){
+            System.out.println("APROVADO!");
         }
-
-
+        else {
+            System.out.println("REPROVADO!");
+        }
 
 
     }
